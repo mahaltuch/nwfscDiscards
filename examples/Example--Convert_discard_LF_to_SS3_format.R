@@ -5,6 +5,7 @@ library(nwfscDiscards) # This should reflect the latest formal release
 
 # Read data
 data( Simulated_example_Length_Freq ) # Simulated numbers (not proportions)
+LF = Simulated_example_Length_Freq
 LengthBins = seq(12, 66, by=2)
 
 # Loop across gears and states
@@ -15,7 +16,6 @@ for(sI in 1:length(unique(LF[,'State']))){
 
   # Restrict to single fleet
   LF_sub = LF[which(LF[,'Gear']==Gear & LF[,'State']==State),]
-  SampSize_sub = SampSize[which(SampSize[,'Gear']==Gear & SampSize[,'State']==State),]
 
   # Length_Frequency_Table=LF; Sample_Size_Table=SampSize; LengthBins=LengthBins; season=1; fleet=NA; gender=0; partition=1
   SS3 = Convert_discardLF_to_ss3_format_Fn( Length_Frequency_Table=LF_sub, LengthBins=LengthBins, season=1, fleet=NA, gender=0, partition=1 )
