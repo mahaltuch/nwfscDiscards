@@ -19,3 +19,5 @@ Install the package as follows:
     # Load package
     library(nwfscDiscards) # This should reflect the latest formal release
 
+Please see examples folder (i.e., https://github.com/nwfsc-assess/nwfscDiscards/blob/master/examples/Example--Convert_discard_LF_to_SS3_format.R) for an example of how to run the model.
+
